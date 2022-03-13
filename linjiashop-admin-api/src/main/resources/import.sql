@@ -531,7 +531,7 @@ INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify
 -- ----------------------------
 -- Records of t_sys_notice.sql
 -- ----------------------------
-INSERT INTO `t_sys_notice` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `content`, `title`, `type`) VALUES (1, 1, '2017-1-11 08:53:20', 1, '2019-1-8 23:30:58', '欢迎使用邻家小铺后台管理系统', '邻家小铺', 10);
+INSERT INTO `t_sys_notice` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `content`, `title`, `type`) VALUES (1, 1, '2017-1-11 08:53:20', 1, '2019-1-8 23:30:58', '欢迎使用XX后台管理系统', 'XX', 10);
 
 -- ----------------------------
 -- Records of t_sys_operation_log.sql

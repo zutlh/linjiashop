@@ -3,10 +3,6 @@
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 @
 doc/database.sql,a\9\a9c8688eee63584dd4a7374bb04ade0c2858026e
-~
-Nlinjiashop-admin-api/src/main/java/cn/enilu/flash/api/AdminApiApplication.java,9\c\9c513536fec538de4344e5253e01a86ee2f7d2d9
-L
-linjiashop-admin-api/pom.xml,e\9\e956fe7f579cc10b3512d2e8ace063c789a1a012
 G
 linjiashop-core/pom.xml,2\7\27df914d59a96e9ad9710d71c840e972e947f469
 7
