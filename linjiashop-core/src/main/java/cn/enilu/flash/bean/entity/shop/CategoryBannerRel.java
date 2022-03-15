@@ -10,8 +10,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 
 /**
- * @author ：enilu
- * @date ：Created in 11/15/2019 2:16 PM
+
  */
 @Data
 @Entity(name="t_shop_category_banner_rel")

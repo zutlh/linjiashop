@@ -8,8 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /**
- * @author ：enilu
- * @date ：Created in 2019/10/29 17:39
+
  */
 @Data
 @Table(appliesTo = "t_shop_address",comment = "收货地址")

@@ -14,8 +14,6 @@ import java.util.Date;
 
 /**
  * 前端业务实体基类
- * @author ：enilu
- * @date ：Created in 2019/10/29 19:09
  */
 
 @MappedSuperclass

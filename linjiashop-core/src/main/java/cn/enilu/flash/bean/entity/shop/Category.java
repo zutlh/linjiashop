@@ -13,8 +13,7 @@ import javax.persistence.Transient;
 import java.util.List;
 
 /**
- * @author ：enilu
- * @date ：Created in 2019/10/29 17:40
+
  */
 @Data
 @Table(appliesTo = "t_shop_category",comment = "商品类别")

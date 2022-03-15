@@ -10,8 +10,6 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * @author ：enilu
- * @date ：Created in 12/8/2019 10:31 PM
  */
 
 @Data

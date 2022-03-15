@@ -11,9 +11,6 @@ import javax.persistence.EntityListeners;
 import javax.validation.constraints.NotBlank;
 
 /**
- * Created  on 2018/4/2 0002.
- *
- * @author enilu
  */
 @Entity(name = "t_sys_menu")
 @Table(appliesTo = "t_sys_menu",comment = "菜单")

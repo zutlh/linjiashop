@@ -10,8 +10,7 @@ import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 
 /**
- * @author ：enilu
- * @date ：Created in 2019/10/29 17:39
+
  */
 @Data
 @Table(appliesTo = "t_shop_goods",comment = "商品")

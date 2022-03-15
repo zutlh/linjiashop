@@ -10,8 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 
 /**
- * @author ：enilu
- * @date ：Created in 2020/2/9 10:00
  * 物流公司
  */
 @Data

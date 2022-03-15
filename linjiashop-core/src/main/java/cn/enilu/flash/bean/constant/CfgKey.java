@@ -3,8 +3,7 @@ package cn.enilu.flash.bean.constant;
 /**
  * 系统参数key列表
  * 所有“系统管理”-“参数管理”中配置的参数的key都在此定义
- * @author ：enilu
- * @date ：Created in 1/19/2020 4:37 PM
+
  */
 public interface CfgKey {
     String SYSTEM_FILE_UPLOAD_PATH = "system.file.upload.path";

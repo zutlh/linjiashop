@@ -21,9 +21,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @author ：enilu
- * @date ：Created in 2019/7/30 23:08
- */
+ *
+ * */
 @Configuration
 public class ShiroConfig {
     @Bean("securityManager")

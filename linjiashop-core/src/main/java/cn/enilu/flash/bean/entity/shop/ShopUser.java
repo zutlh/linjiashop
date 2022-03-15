@@ -13,8 +13,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author ：enilu
- * @date ：Created in 2019/10/29 17:41
+
  */
 @Data
 @Table(appliesTo = "t_shop_user",comment = "用户")

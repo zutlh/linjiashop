@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 /**
- * @author ：enilu
- * @date ：Created in 1/7/2020 2:23 PM
  */
 @RequestMapping("/dashboard")
 @RestController

@@ -12,8 +12,6 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * @author ：enilu
- * @date ：Created in 1/8/2020 8:10 PM
  */
 @Data
 @Entity(name="t_promotion_topic")

@@ -10,9 +10,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * Created  on 2018/4/2 0002.
- *
- * @author enilu
+
  */
 
 @Entity(name = "t_sys_operation_log")

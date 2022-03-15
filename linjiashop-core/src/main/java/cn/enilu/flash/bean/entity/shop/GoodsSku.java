@@ -11,8 +11,7 @@ import javax.persistence.EntityListeners;
 import java.math.BigDecimal;
 
 /**
- * @author ：enilu
- * @date ：Created in 12/8/2019 10:36 PM
+
  */
 
 @Data

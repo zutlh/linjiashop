@@ -14,8 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author ：enilu
- * @date ：Created in 2020/01/02 22:54
+
  */
 @Data
 @Table(appliesTo = "t_shop_express_info",comment = "快递信息")

@@ -18,8 +18,6 @@ import java.util.Date;
 
 /**
  * 后端业务实体基类
- * Created  on 2019/1/8 0002.
- * @author enilu
  */
 @MappedSuperclass
 @Data

@@ -8,8 +8,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
- * @author ：enilu
- * @date ：Created in 2019/10/29 17:40
+
  */
 @Data
 @Table(appliesTo = "t_shop_cart",comment = "购物车")

@@ -8,8 +8,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 
 /**
- * @author ：enilu
- * @date ：Created in 2020/2/6 22:27
+
  */
 @Data
 @Table(appliesTo = "t_shop_order_log",comment = "订单日志")

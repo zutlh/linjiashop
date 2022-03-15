@@ -9,8 +9,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 
 /**
- * @author ：enilu
- * @date ：Created in 12/8/2019 10:36 PM
  */
 
 @Data

@@ -7,8 +7,7 @@ import org.hibernate.annotations.Table;
 import javax.persistence.*;
 
 /**
- * @author ：enilu
- * @date ：Created in 1/21/2020 11:13 AM
+
  */
 @Data
 @Entity(name="t_shop_favorite")

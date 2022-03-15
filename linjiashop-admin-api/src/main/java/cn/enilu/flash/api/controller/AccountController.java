@@ -31,10 +31,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * AccountController
- *
- * @author enilu
- * @version 2018/9/12 0012
+
  */
 @RestController
 @RequestMapping("/account")
