@@ -17,6 +17,7 @@
           <el-button type="primary" size="mini" icon="el-icon-edit" @click.native="edit">{{ $t('button.edit') }}</el-button>
           <el-button type="danger" size="mini" icon="el-icon-delete" @click.native="remove">{{ $t('button.delete') }}</el-button>
           <el-button type="primary" size="mini" icon="el-icon-setting" @click.native="openPermissions">权限配置</el-button>
+          <el-button type="success" size="mini" icon="el-icon-setting" @click.native="addBusinessMan">添加商家</el-button>
         </el-col>
       </el-row>
     </div>
@@ -132,6 +133,53 @@
         </el-form-item>
       </el-form>
     </el-dialog>
+
+    <el-dialog
+      :title="formBusinessTitle"
+      :visible.sync="formBusinessVisible"
+      width="70%">
+      <el-form ref="form" :model="BusinessForm" :rules="rules" label-width="80px">
+        <el-row>
+          <el-col :span="12">
+            <el-form-item label="编码" prop="tips">
+              <el-input v-model="BusinessForm.tips" minlength=1></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="名称" prop="name">
+              <el-input v-model="BusinessForm.name" minlength=1></el-input>
+            </el-form-item>
+          </el-col>
+
+          <el-col :span="12">
+            <el-form-item label="上级角色">
+              <el-input
+                placeholder="请选择上级角色"
+                v-model="BusinessForm.pName"
+                readonly="readonly"
+                @click.native="roleTree.show = !roleTree.show">
+              </el-input>
+              <el-tree v-if="roleTree.show"
+                       empty-text="暂无数据"
+                       :expand-on-click-node="false"
+                       :data="list"
+                       :props="roleTree.defaultProps"
+                       @node-click="handleRoleNodeClick"
+                       class="input-tree">
+              </el-tree>
+
+            </el-form-item>
+          </el-col>
+
+
+        </el-row>
+        <el-form-item>
+          <el-button type="primary" @click="saveBusiness">{{ $t('button.submit') }}</el-button>
+          <el-button @click.native="formBusinessVisible = false">{{ $t('button.cancel') }}</el-button>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
+
 
 
     <el-dialog

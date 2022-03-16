@@ -17,6 +17,14 @@ export function save(params) {
   })
 }
 
+export function saveBusinessMan(params){
+  return request({
+    url: '/role/saveBusinessMan',
+    method: 'post',
+    params
+  })
+}
+
 export function remove(roleId) {
   return request({
     url: '/role',

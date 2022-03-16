@@ -1,6 +1,6 @@
-import { remove, getList, save, savePermissons } from '@/api/system/role'
-import { list as getDeptList } from '@/api/system/dept'
-import { menuTreeListByRoleId } from '@/api/system/menu'
+import {remove, getList, save, savePermissons, saveBusinessMan} from '@/api/system/role'
+import {list as getDeptList} from '@/api/system/dept'
+import {menuTreeListByRoleId} from '@/api/system/menu'
 
 export default {
   name: 'role',
@@ -8,6 +8,8 @@ export default {
     return {
       formVisible: false,
       formTitle: '添加角色',
+      formBusinessVisible: false,
+      formBusinessTitle: '添加商家',
       deptList: [],
       roleList: [],
       isAdd: true,
@@ -47,14 +49,20 @@ export default {
         pName: '',
         num: 1
       },
+      BusinessForm: {
+        id: '',
+        tips: '',
+        name: '',
+        pName: ''
+      },
       rules: {
         tips: [
-          { required: true, message: '请输入角色编码', trigger: 'blur' },
-          { min: 3, max: 20, message: '长度在 3 到 20 个字符', trigger: 'blur' }
+          {required: true, message: '请输入角色编码', trigger: 'blur'},
+          {min: 3, max: 20, message: '长度在 3 到 20 个字符', trigger: 'blur'}
         ],
         name: [
-          { required: true, message: '请输入角色名称', trigger: 'blur' },
-          { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
+          {required: true, message: '请输入角色名称', trigger: 'blur'},
+          {min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur'}
         ]
       },
       listQuery: {
@@ -139,10 +147,24 @@ export default {
 
       }
     },
+    resetBusinessForm() {
+      this.BusinessForm = {
+        id: '',
+        tips: '',
+        name: '',
+        pName: ''
+      }
+    },
     add() {
       this.resetForm()
       this.formTitle = '添加角色'
       this.formVisible = true
+      this.isAdd = true
+    },
+    addBusinessMan() {
+      this.resetBusinessForm()
+      this.formBusinessTitle = '添加商家'
+      this.formBusinessVisible = true
       this.isAdd = true
     },
     save() {
@@ -164,6 +186,28 @@ export default {
             this.formVisible = false
           })
         } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
+    },
+    saveBusiness() {
+      this.$refs['BusinessForm'].validate((valid) => {
+        if (valid) {
+          saveBusinessMan({
+            id: this.BusinessForm.id,
+            name: this.BusinessForm.name,
+            pName: this.BusinessForm.pName,
+            tips: this.BusinessForm.tips
+          }).then(response => {
+            this.$message({
+              message: '提交成功',
+              type: 'success'
+            })
+            this.fetchData()
+            this.formBusinessVisible = false
+          })
+        }else{
           console.log('error submit!!')
           return false
         }
@@ -203,7 +247,7 @@ export default {
               type: 'success'
             })
             this.fetchData()
-          }).catch( err=> {
+          }).catch(err => {
 
           })
         }).catch(() => {
@@ -220,7 +264,7 @@ export default {
       }
     },
     savePermissions() {
-      let checkedNodes =this.$refs.permissonTree.getCheckedNodes(false,true)
+      let checkedNodes = this.$refs.permissonTree.getCheckedNodes(false, true)
       let menuIds = ''
       for (var index in checkedNodes) {
         menuIds += checkedNodes[index].id + ','
